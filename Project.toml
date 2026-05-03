@@ -1,0 +1,5 @@
+name = "JuliaBasic"
+uuid = "d1d17f3b-8d0a-4e00-a4f2-f2d0c54d6e6c"
+authors = ["Your Name <you@example.com>"]
+deps = {}
+compat = {julia = "1.10"}
