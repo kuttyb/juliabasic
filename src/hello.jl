@@ -1,6 +1,8 @@
 abstract type A end
 abstract type B end
 
+include("main_helpers.jl")
+
 struct A1 <: A
     value::Int
 end
@@ -17,4 +19,4 @@ function main()
     println("process(B1) = ", process(B1(2.5)))
 end
 
-main()
+@if_main main()

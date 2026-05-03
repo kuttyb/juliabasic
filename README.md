@@ -20,3 +20,11 @@ A small Julia project with a focus on allocation-free, type-stable code using mu
 ```bash
 julia src/hello.jl
 ```
+
+## Disassembly
+
+To print the x86 assembly for `main`, run:
+
+```bash
+julia scripts/disassemble_main.jl
+```
