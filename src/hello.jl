@@ -1,18 +1,12 @@
-function fill_squares!(out::Vector{T}, n::Int) where {T<:Integer}
-    @inbounds for i in 1:n
-        out[i] = i * i
-    end
-    return out
+function square(x::Integer)
+    x * x
 end
 
-function fill_squares!(out::Vector{T}, n::Int) where {T<:AbstractFloat}
-    @inbounds for i in 1:n
-        out[i] = (T(i) * T(i))
-    end
-    return out
+function square(x::AbstractFloat)
+    x + x
 end
 
-const N = 10
-const squares = Vector{Int}(undef, N)
-fill_squares!(squares, N)
-println("squares = ", squares)
+const i = 7
+const f = 2.5
+println("square(Integer) = ", square(i))
+println("square(Float) = ", square(f))
