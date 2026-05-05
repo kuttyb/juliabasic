@@ -23,13 +23,10 @@ function parse_stage(values::Vector{Integer})
 end
 
 function process_stage(values::Vector{Integer})
-    first_even_index = findfirst(v -> v != 0 && iseven(v), values)
-    first_even_value = first_even_index === nothing ? zero(Integer) : values[first_even_index]
-    output = Vector{Integer}(undef, length(values))
-    for i in eachindex(values)
-        output[i] = values[i] * first_even_value
-    end
-    output
+    first_even_value = findfirst(v -> v != 0 && iseven(v), values) |>
+                       (i -> i === nothing ? 0 : values[i])
+
+    map(v -> v * first_even_value, values)
 end
 
 function summarize_stage(values::Vector{Integer})::Integer
@@ -49,6 +46,3 @@ function main()
     return summary
 end
 
-if abspath(PROGRAM_FILE) == abspath(@__FILE__)
-    main()
-end
