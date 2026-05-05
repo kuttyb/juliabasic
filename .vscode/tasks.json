@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Julia hello",
+      "type": "shell",
+      "command": "/home/codespace/.juliaup/bin/julia",
+      "args": ["--project=.", "src/hello.jl"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
