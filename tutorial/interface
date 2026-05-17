@@ -1,0 +1,8 @@
+
+ Stick to ADTs.
+
+ Below it, declare the methods with no body.
+
+ Use JET.jl to enforce no method error in the call tree along after ensuring we are type stable
+
+ 

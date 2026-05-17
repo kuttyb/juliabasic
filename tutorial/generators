@@ -1,0 +1,13 @@
+
+ It is a cute way of writing a for loop
+
+ generator -->  gen = (map(x) for x in xs filter(x))
+
+
+ You can higher order function them to mimic nested loops.
+
+ As long as you are type stable, it should result in the same codegen
+
+ Monomorphization via type stability is the key
+
+ 
